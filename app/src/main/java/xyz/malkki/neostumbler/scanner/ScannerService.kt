@@ -80,14 +80,14 @@ class ScannerService : Service() {
 
         private const val EXTRA_AUTOSTART = "autostart"
 
-        //Try to get new locations every 5 seconds
-        private val LOCATION_INTERVAL = 5.seconds
+        //Try to get new locations every 1 seconds
+        private val LOCATION_INTERVAL = 1.seconds
 
-        private val CELL_SCAN_INTERVAL = 10.seconds
+        private val CELL_SCAN_INTERVAL = 1.seconds
 
         private val WIFI_SCAN_INTERVAL_THROTTLED = 30.seconds
 
-        private val WIFI_SCAN_INTERVAL_UNTHROTTLED = 10.seconds
+        private val WIFI_SCAN_INTERVAL_UNTHROTTLED = 1.seconds
 
         fun startIntent(context: Context, autostart: Boolean = false): Intent {
             return Intent(context, ScannerService::class.java).apply {
